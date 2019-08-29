@@ -33,7 +33,8 @@ Just simple Logger
                        DESC
 
   s.homepage         = 'https://github.com/ElonPark/EPLogger'
-  s.screenshots      = 'screenshot1.png', 'screenshot2.png'
+  s.screenshots      = 'https://user-images.githubusercontent.com/13270453/63907154-59416680-ca55-11e9-888c-3bbc2cde6f68.png',
+                       'https://user-images.githubusercontent.com/13270453/63907156-59416680-ca55-11e9-902c-93602e95c0d3.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Elon' => 'sungwoon.park92@gmail.com' }
   s.source           = { :git => 'https://github.com/ElonPark/EPLogger.git', :tag => s.version.to_s }
