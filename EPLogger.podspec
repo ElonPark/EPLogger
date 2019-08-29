@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'EPLogger'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of EPLogger.'
+  s.summary          = 'Just simple Logger'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,19 +18,30 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Just simple Logger
+
+```swift
+
+   // set Log level. default is verbose
+   Log.setLevel(.debug)
+
+   Log.verbose("verbose")
+   Log.debug("debug")
+   Log.warning("warning")
+   Log.error("error")
+```
                        DESC
 
-  s.homepage         = 'https://github.com/elon/EPLogger'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/ElonPark/EPLogger'
+  s.screenshots      = 'screenshot1.png', 'screenshot2.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'elon' => 'elon@popone.co.kr' }
-  s.source           = { :git => 'https://github.com/elon/EPLogger.git', :tag => s.version.to_s }
+  s.author           = { 'Elon' => 'sungwoon.park92@gmail.com' }
+  s.source           = { :git => 'https://github.com/ElonPark/EPLogger.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-
-  s.source_files = 'EPLogger/Classes/**/*'
+  s.swift_versions = '5.0'
+  s.source_files = 'EPLogger/Classes/*'
   
   # s.resource_bundles = {
   #   'EPLogger' => ['EPLogger/Assets/*.png']

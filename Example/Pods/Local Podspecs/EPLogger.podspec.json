@@ -1,0 +1,22 @@
+{
+  "name": "EPLogger",
+  "version": "0.1.0",
+  "summary": "A short description of EPLogger.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/elon/EPLogger",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "elon": "elon@popone.co.kr"
+  },
+  "source": {
+    "git": "https://github.com/elon/EPLogger.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "EPLogger/Classes/**/*"
+}

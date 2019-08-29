@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import EPLogger
+
+// If you want to get import once and use it globally
+public typealias Log = EPLogger.Log
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +19,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Set log level. default is verbose
+        Log.setLevel(.verbose)
+        
+        Log.verbose("This is verbose")
+        Log.debug("This is debug")
+        Log.info("This is info")
+        Log.warning("This is warning")
+        Log.error("This is error")
+        
         return true
     }
 

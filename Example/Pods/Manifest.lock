@@ -1,0 +1,16 @@
+PODS:
+  - EPLogger (0.1.0)
+
+DEPENDENCIES:
+  - EPLogger (from `../`)
+
+EXTERNAL SOURCES:
+  EPLogger:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  EPLogger: c1a8549566ccb68e6f1dc3ee4ccff3508a97242a
+
+PODFILE CHECKSUM: a8631a7901040d7ddac01ffc59b141f98c4bef73
+
+COCOAPODS: 1.7.5
