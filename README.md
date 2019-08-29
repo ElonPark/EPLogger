@@ -5,9 +5,28 @@
 [![License](https://img.shields.io/cocoapods/l/EPLogger.svg?style=flat)](https://cocoapods.org/pods/EPLogger)
 [![Platform](https://img.shields.io/cocoapods/p/EPLogger.svg?style=flat)](https://cocoapods.org/pods/EPLogger)
 
+## Use
+
+1. `import EPLogger` in your `AppDelegate.swift`
+2. copy & paste `public typealias Log = EPLogger.Log` into your `AppDelegate.swift` to top
+3. Set Log level in to `didFinishLaunchingWithOptions` method
+4. Done!
+
+
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+<div>
+    <img width="1200" src="./screenshot1.png">
+</div>
+  
+  
+It will print like this
+  
+  
+<div>
+    <img width="1200" src="./screenshot2.png">
+</div>
+  
 
 ## Requirements
 
