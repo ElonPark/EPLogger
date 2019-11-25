@@ -104,6 +104,11 @@ public struct Log {
     
     private init() {}
     
+    @available(*, deprecated, message: "setLevel() is will remove next version, use Log.config(level:)")
+    public static func setLevel( _ config: Log.Level) {
+        logLevel = config
+    }
+    
     /// Configration
     /// - Parameters:
     ///   - level: Log level. default: Log.Level.verbose
