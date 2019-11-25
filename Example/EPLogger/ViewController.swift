@@ -21,6 +21,5 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
         Log.warning("Memory Warning!")
     }
-
 }
 
