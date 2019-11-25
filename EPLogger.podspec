@@ -22,8 +22,8 @@ Just simple Logger
 
 ```swift
 
-   // set Log level. default is verbose
-   Log.setLevel(.debug)
+   // Log level. default is verbose
+   Log.config(level: .debug)
 
    Log.verbose("verbose")
    Log.debug("debug")
