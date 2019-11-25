@@ -12,18 +12,43 @@
 4. Done!
 
 
-## Example
 
-<div>
-    <img width="1200" src="./screenshot1.png">
-</div>
+
+## Example
+```swift
+
+import UIKit
+import EPLogger
+
+// If you want to get import once and use it globally
+public typealias Log = EPLogger.Log
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    var window: UIWindow?
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // Set log level. default is verbose
+        Log.congfig(level: .verbose)
+        Log.verbose("This is verbose")
+        Log.debug("This is debug")
+        Log.info("This is info")
+        Log.warning("This is warning")
+        Log.error("This is error")
+
+        return true
+    )
+}
+```
   
   
 It will print like this
   
   
 <div>
-    <img width="1200" src="./screenshot2.png">
+    <img width="1200" src="./screenshot.png">
 </div>
   
 
