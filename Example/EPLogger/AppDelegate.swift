@@ -18,11 +18,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // Set log level. default is verbose
-        Log.setLevel(.verbose)
+        Log.congfig(level: .verbose)
+        Log.verbose("This is verbose")
+        Log.debug("This is debug")
+        Log.info("This is info")
+        Log.warning("This is warning")
+        Log.error("This is error")
         
+        print("\n change format")
+        Log.congfig(formatType: .short)
+        Log.verbose("short")
+        
+        Log.congfig(formatType: .medium)
+        Log.debug("medium")
+        
+        Log.congfig(formatType: .long)
+        Log.info("long")
+        
+        Log.congfig(formatType: .full)
+        Log.warning("full")
+       
+        Log.congfig(formatType: .short)
+        print("\n change log level header")
+        Log.congfig(customLevelHeader: [
+            .verbose: "VERBOSE",
+            .debug: "DEBUG"
+        ])
+        Log.verbose("This is verbose")
+        Log.debug("This is debug")
+        Log.info("This is info")
+        Log.warning("This is warning")
+        Log.error("This is error")
+        
+        print("\n change separator")
+        Log.congfig(separator: ": ")
+        Log.info("Hello")
+        Log.warning("world!")
+        print("")
+        
+        Log.congfig(
+            level: .debug,
+            formatType: .medium,
+            separator: " -> "
+        )
         Log.verbose("This is verbose")
         Log.debug("This is debug")
         Log.info("This is info")
