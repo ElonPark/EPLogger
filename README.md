@@ -8,11 +8,10 @@
 
 1. `import EPLogger` in your `AppDelegate.swift`
 2. copy & paste `public typealias Log = EPLogger.Log` into your `AppDelegate.swift` to top
-3. Set Log level in to `didFinishLaunchingWithOptions` method
+3. Set Log level in to `AppDelegate.didFinishLaunchingWithOptions` method
 4. Done!
 
-
-
+more detail, see [Example](./Example/EPLogger/ViewController.swift)
 
 ## Example
 ```swift
@@ -48,7 +47,7 @@ It will print like this
   
   
 <div>
-    <img width="1200" src="./screenshot.png">
+    <img width="1200" src="https://user-images.githubusercontent.com/13270453/77232955-8c149d00-6be7-11ea-9396-773b36996e98.png">
 </div>
   
 

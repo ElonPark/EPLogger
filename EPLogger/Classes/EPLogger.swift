@@ -26,12 +26,12 @@ extension Log {
         }
         
         fileprivate func intValue() -> Int {
-            let _intValue: [Log.Level : Int] = [
-                .verbose : 0,
-                .debug : 1,
-                .info : 2,
-                .warning : 3,
-                .error : 4
+            let _intValue: [Log.Level: Int] = [
+                .verbose: 0,
+                .debug: 1,
+                .info: 2,
+                .warning: 3,
+                .error: 4
             ]
             
             return _intValue[self] ?? 4
@@ -41,16 +41,16 @@ extension Log {
 
 extension Log {
     public enum FormatType {
-        /// [Level] Any...
+        /// [Level] ▷ Any...
         case short
         
-        /// [Level] file:line (funcName) Any...
+        /// [Level] file:line funcName ▷ Any...
         case medium
         
-        /// Time: [Level] file:line (funcName) Any...
+        /// Time: [Level] file:line funcName ▷ Any...
         case long
         
-        /// Time: [Level] file:line (funcName) [Thread Name] Any...
+        /// Time: [Level] file:line funcName [Thread Name] ▷ Any...
         case full
     }
 }
@@ -87,12 +87,13 @@ public struct Log {
     /// ```swift
     ///    Log.config(customLevelHeader: [.verbose : "VERBOSE"])
     ///    log.verbose("Hello, world!")
-    ///    // VERBOSE -> Hello, world!
+    ///    // VERBOSE ▷ Hello, world!
     /// ```
     public private(set) static var customLevelHeader = [Log.Level : String]()
     
-    
     /// Separator
+    ///
+    /// default is " ▷ "
     ///
     /// ex)
     /// ```swift
@@ -100,21 +101,17 @@ public struct Log {
     ///    log.verbose("Hello, world!")
     ///    // 📢 [VERBOSE] : Hello, world!
     /// ```
-    public private(set) static var separator = " -> "
+    public private(set) static var separator = " ▷ "
     
     private init() {}
-    
-    @available(*, deprecated, message: "setLevel() is will remove next version, use Log.config(level:)")
-    public static func setLevel( _ config: Log.Level) {
-        logLevel = config
-    }
-    
+   
     /// Configration
+    /// 
     /// - Parameters:
     ///   - level: Log level. default: Log.Level.verbose
     ///   - customLevelHeader: Custom log level header.
     ///   - formatType: Log String FormatType.  `default`: Log.FormatType.full
-    ///   - separator: Separator String. `default`: " -> "
+    ///   - separator: Separator String. `default`: " ▷ "
     ///   - dateFormat: DateFormatter date fomat string. `default`: yyyy-MM-dd HH:mm:ss.SSS
     ///
     /// ```swift
@@ -122,24 +119,24 @@ public struct Log {
     ///    // dateFormat
     ///    Log.config(dateFormat: "yyyy-MM-dd")
     ///    Log.verbose("This is verbose")
-    ///    // 2019-11-25: 📢 [VERBOSE] Code.swift:26 (method()) [com.apple.main-thread] -> This is verbose
+    ///    // 2019-11-25: 📢 [VERBOSE] Code.swift:26 method() [com.apple.main-thread] ▷ This is verbose
     ///
     ///    // formatType
     ///    Log.config(formatType: .short)
     ///    Log.verbose("This is verbose")
-    ///    // 📢 [VERBOSE] -> This is verbose
+    ///    // 📢 [VERBOSE] ▷ This is verbose
     ///
     ///    Log.config(formatType: .medium)
     ///    Log.verbose("This is verbose")
-    ///    // 📢 [VERBOSE] Code.swift:26 (method()) -> This is verbose
+    ///    // 📢 [VERBOSE] Code.swift:26 (method()) ▷ This is verbose
     ///
     ///    Log.config(formatType: .long)
     ///    Log.verbose("This is verbose")
-    ///    // 2019-11-25: 📢 [VERBOSE] Code.swift:26 (method()) -> This is verbose
+    ///    // 2019-11-25: 📢 [VERBOSE] Code.swift:26 (method()) ▷ This is verbose
     ///
     ///    Log.config(formatType: .full)
     ///    Log.verbose("This is verbose")
-    ///    // 2019-11-25: 📢 [VERBOSE] Code.swift:26 (method()) [com.apple.main-thread] -> This is verbose
+    ///    // 2019-11-25: 📢 [VERBOSE] Code.swift:26 (method()) [com.apple.main-thread] ▷ This is verbose
     ///
     ///    // customLevelHeader
     ///    Log.config(customLevelHeader: [
@@ -150,7 +147,7 @@ public struct Log {
     ///      .error: "ERROR"
     ///    ])
     ///    log.verbose("Hello, world!")
-    ///    // VERBOSE -> Hello, world!
+    ///    // VERBOSE ▷ Hello, world!
     ///
     ///    // separator
     ///    Log.config(separator: ": ")
@@ -188,28 +185,36 @@ public struct Log {
         case .short:
             return "\(level.string)"
         case .medium:
-            return "\(level.string) (\(funcName))"
+            return "\(level.string) \(funcName)"
         case .long:
-            return "\(time): \(level.string) \(file):\(line) (\(funcName))"
+            return "\(time): \(level.string) \(file):\(line) \(funcName)"
         case .full:
             let thread = threadName
-            return "\(time): \(level.string) \(file):\(line) (\(funcName)) [\(thread)]"
+            return "\(time): \(level.string) \(file):\(line) \(funcName) [\(thread)]"
         }
     }
     
-    private static func logger(_ level: Log.Level, fileName: String, line: UInt, funcName: String, output: Any) {
+    private static func logger(
+        _ level: Log.Level,
+        fileName: String,
+        line: UInt,
+        funcName: String,
+        useDebugPrint: Bool,
+        useDump: Bool,
+        output: Any
+    ) {
         #if DEBUG
         guard  logLevel.intValue() <= level.intValue() else { return }
-        var logString = Log.logString(
+        let logString = Log.logString(
             level,
             fileName: fileName,
             line: line,
             funcName: funcName
         )
-        
+
         internalQueue.sync {
             guard let items = output as? [Any] else {
-                Swift.print(logString + separator + "\(output)")
+                logPrinter(logString, useDebugPrint, useDump, value: output)
                 return
             }
             
@@ -217,64 +222,146 @@ public struct Log {
             case 0:
                 Swift.print(logString)
             case 1:
-                Swift.print(logString + separator + "\(items[0])")
+                logPrinter(logString, useDebugPrint, useDump, value: items[0])
             default:
-                logString += "\(separator)\n"
-                logString += items.map { "\($0)" }
-                    .joined(separator: "\n")
-                
-                Swift.print(logString)
+                multipleItemLogPrinter(logString, useDebugPrint, useDump, items: items)
             }
         }
         #endif
     }
     
-    public static func verbose(fileName: String = #file, line: UInt = #line, funcName: String = #function, _ output: Any...) {
+    private static func logPrinter(_ logString: String, _ useDebugPrint: Bool, _ useDump: Bool, value: Any) {
+        if useDump {
+            Swift.print("\(logString)\(separator)")
+            Swift.dump(value, name: name(value), indent: 2)
+        } else {
+            Swift.print("\(logString)\(separator)", terminator: "")
+            if useDebugPrint {
+                Swift.debugPrint(value)
+            } else {
+                Swift.print(value)
+            }
+        }
+    }
+    
+    private static func multipleItemLogPrinter(
+        _ logString: String,
+        _ useDebugPrint: Bool,
+        _ useDump: Bool,
+        items: [Any]
+    ) {
+        if useDump {
+            Swift.print("\(logString) ▽")
+            for item in items {
+                Swift.dump(item, name: name(item), indent: 2)
+            }
+        } else {
+            Swift.print("\(logString) ▽")
+            for item in items {
+                if useDebugPrint {
+                    Swift.debugPrint(item)
+                } else {
+                    Swift.print(item)
+                }
+            }
+        }
+    }
+    
+    private static func name(_ value: Any) -> String {
+        return "\(type(of: value))"
+    }
+    
+    public static func verbose(
+        fileName: String = #file,
+        line: UInt = #line,
+        funcName: String = #function,
+        useDebugPrint: Bool = false,
+        useDump: Bool = false,
+        _ output: Any...
+    ) {
         logger(
             .verbose,
             fileName: fileName,
             line: line,
             funcName: funcName,
+            useDebugPrint: useDebugPrint,
+            useDump: useDump,
             output: output
         )
     }
     
-    public static func debug(fileName: String = #file, line: UInt = #line, funcName: String = #function, _ output: Any...) {
+    public static func debug(
+        fileName: String = #file,
+        line: UInt = #line,
+        funcName: String = #function,
+        useDebugPrint: Bool = false,
+        useDump: Bool = false,
+        _ output: Any...
+    ) {
         logger(
             .debug,
             fileName: fileName,
             line: line,
             funcName: funcName,
+            useDebugPrint: useDebugPrint,
+            useDump: useDump,
             output: output
         )
     }
     
-    public static func info(fileName: String = #file, line: UInt = #line, funcName: String = #function, _ output: Any...) {
+    public static func info(
+        fileName: String = #file,
+        line: UInt = #line,
+        funcName: String = #function,
+        useDebugPrint: Bool = false,
+        useDump: Bool = false,
+        _ output: Any...
+    ) {
         logger(
             .info,
             fileName: fileName,
             line: line,
             funcName: funcName,
+            useDebugPrint: useDebugPrint,
+            useDump: useDump,
             output: output
         )
     }
     
-    public static func warning(fileName: String = #file, line: UInt = #line, funcName: String = #function, _ output: Any...) {
+    public static func warning(
+        fileName: String = #file,
+        line: UInt = #line,
+        funcName: String = #function,
+        useDebugPrint: Bool = false,
+        useDump: Bool = false,
+        _ output: Any...
+    ) {
         logger(
             .warning,
             fileName: fileName,
             line: line,
             funcName: funcName,
+            useDebugPrint: useDebugPrint,
+            useDump: useDump,
             output: output
         )
     }
     
-    public static func error(fileName: String = #file, line: UInt = #line, funcName: String = #function, _ output: Any...) {
+    public static func error(
+        fileName: String = #file,
+        line: UInt = #line,
+        funcName: String = #function,
+        useDebugPrint: Bool = false,
+        useDump: Bool = false,
+        _ output: Any...
+    ) {
         logger(
             .error,
             fileName: fileName,
             line: line,
             funcName: funcName,
+            useDebugPrint: useDebugPrint,
+            useDump: useDump,
             output: output
         )
     }
