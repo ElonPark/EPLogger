@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		326CD2B651DD0E828F2E9D2FEA71D4B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		3ECA5B78A0C1B5A138864CADCA895205 /* Pods-EPLogger_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E671D4029BA3F2D3A46F49ED845A0311 /* Pods-EPLogger_Example-dummy.m */; };
-		620639F509055E4F2BE3C3C84D1BF700 /* EPLogger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 621159E1F9144A83DE2A34A28337BE19 /* EPLogger-dummy.m */; };
-		7A6C2FCFFEB9B20AD4DB00CEE0103621 /* EPLogger-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D7EFEC129CBC7AA0D3DF51C6D992679 /* EPLogger-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A6C2FCFFEB9B20AD4DB00CEE0103621 /* EPLogger-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D42EC3765AC2D5E6178CD2CC409B911B /* EPLogger-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C9E125C1728C3A03D975FA791DB0D2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		A8C11CFC75EE0E7D155ED4C1EBD73884 /* EPLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0DA5AA790AB0C9B474AE302859C3A /* EPLogger.swift */; };
 		B40514AE12608A6257EB721B5390DEF1 /* Pods-EPLogger_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B3BEAE81DD52B26DF3A9799CF4AC0592 /* Pods-EPLogger_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B56C6F1E603788C449871809DA3E9E89 /* EPLogger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6B53294F5AB67844237B0E35485038 /* EPLogger-dummy.m */; };
 		CF27539D8C260C790AC77E627A642323 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		D6063E81360F33E611921F3FA9E95851 /* Pods-EPLogger_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 50035379BE1B54D0F3CDA9B8B20F5CBF /* Pods-EPLogger_Tests-dummy.m */; };
-		DB5523AE231771E000B77962 /* EPLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5523AD231771E000B77962 /* EPLogger.swift */; };
 		FB9529818DD90B22201DD9D900B07107 /* Pods-EPLogger_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EEA64FF9BB29E806139336B09A64787D /* Pods-EPLogger_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -37,37 +37,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08763280452C9FE5661ABA1713419D77 /* EPLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EPLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		08763280452C9FE5661ABA1713419D77 /* EPLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EPLogger.framework; path = EPLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D501CA998D5A628212AC936C4A173E7 /* Pods-EPLogger_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EPLogger_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		181576E04D9C7A4691F0F56679E1F59B /* Pods-EPLogger_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EPLogger_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1C24CAE7D36CDD70513EAFB04A055132 /* EPLogger.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EPLogger.xcconfig; sourceTree = "<group>"; };
 		221C1870F04258B7BFA9666059B03843 /* Pods-EPLogger_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EPLogger_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		23E0922281F0A162C1FD45D16FDA24CF /* EPLogger.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = EPLogger.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		23126C628FCFD203EA847937D95F57A8 /* EPLogger-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EPLogger-Info.plist"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		371C4988F795149094BA436A090351BA /* Pods-EPLogger_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EPLogger_Example-Info.plist"; sourceTree = "<group>"; };
+		3FD0DA5AA790AB0C9B474AE302859C3A /* EPLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EPLogger.swift; path = EPLogger/Classes/EPLogger.swift; sourceTree = "<group>"; };
+		4185DA2D1C4D8F89B22453D28142615A /* EPLogger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EPLogger.modulemap; sourceTree = "<group>"; };
 		43E2A157D9EE2F3CC5DDD5D40CC33162 /* Pods-EPLogger_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EPLogger_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		50035379BE1B54D0F3CDA9B8B20F5CBF /* Pods-EPLogger_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EPLogger_Tests-dummy.m"; sourceTree = "<group>"; };
-		549A74996B97017958145FCC636B7810 /* Pods_EPLogger_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EPLogger_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		549A74996B97017958145FCC636B7810 /* Pods_EPLogger_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EPLogger_Example.framework; path = "Pods-EPLogger_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BD9953BB4BF8DD5670F9DD2ECEA6583 /* Pods-EPLogger_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EPLogger_Tests-Info.plist"; sourceTree = "<group>"; };
-		5D7EFEC129CBC7AA0D3DF51C6D992679 /* EPLogger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EPLogger-umbrella.h"; sourceTree = "<group>"; };
-		5DB65058E29F0A8079C1AD64EB8E20FA /* EPLogger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EPLogger-prefix.pch"; sourceTree = "<group>"; };
-		621159E1F9144A83DE2A34A28337BE19 /* EPLogger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EPLogger-dummy.m"; sourceTree = "<group>"; };
-		701A7B9DA56C05C9AC495CB8FFB8B857 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		66F4747DBB8AF5CA91A27266E44DFF55 /* EPLogger.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = EPLogger.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6B908DD34A685419841713A23C5F766A /* EPLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EPLogger.release.xcconfig; sourceTree = "<group>"; };
+		8186663337DA3B63AC6F11EA3B820D04 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		919D9E5121A0B87AF11804C3E81295A8 /* EPLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EPLogger.debug.xcconfig; sourceTree = "<group>"; };
 		9292DF01E63EDF9B136D9F8E3CBD965C /* Pods-EPLogger_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EPLogger_Example.release.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A6B53294F5AB67844237B0E35485038 /* EPLogger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EPLogger-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AD870321B03D09DB3096F24D956DB3F4 /* Pods-EPLogger_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EPLogger_Tests.modulemap"; sourceTree = "<group>"; };
+		B1DB0AB0DFF605B74A5141A5F301A4A9 /* EPLogger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EPLogger-prefix.pch"; sourceTree = "<group>"; };
 		B3BEAE81DD52B26DF3A9799CF4AC0592 /* Pods-EPLogger_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EPLogger_Tests-umbrella.h"; sourceTree = "<group>"; };
 		B817F16CB5FBF1892E7E4B3547DE2FE7 /* Pods-EPLogger_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EPLogger_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BA761597DEEF26FEA45397916E0D53A7 /* Pods-EPLogger_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EPLogger_Example.modulemap"; sourceTree = "<group>"; };
-		CF3FED1BD41DF75678A605CB8DC1A6EE /* EPLogger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EPLogger.modulemap; sourceTree = "<group>"; };
-		D710D566FA4EBADB99B425EF1737BAB3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		DB5523AD231771E000B77962 /* EPLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EPLogger.swift; path = EPLogger/Classes/EPLogger.swift; sourceTree = "<group>"; };
+		D42EC3765AC2D5E6178CD2CC409B911B /* EPLogger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EPLogger-umbrella.h"; sourceTree = "<group>"; };
 		E4BA59EC703115587A647B045803365A /* Pods-EPLogger_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EPLogger_Example-frameworks.sh"; sourceTree = "<group>"; };
 		E671D4029BA3F2D3A46F49ED845A0311 /* Pods-EPLogger_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EPLogger_Example-dummy.m"; sourceTree = "<group>"; };
 		E77D780AD94BAF662EE3C594B6B520FD /* Pods-EPLogger_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EPLogger_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		EA33BB5E1CC876BD29B513A0E53EBA05 /* EPLogger-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EPLogger-Info.plist"; sourceTree = "<group>"; };
 		EEA64FF9BB29E806139336B09A64787D /* Pods-EPLogger_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EPLogger_Example-umbrella.h"; sourceTree = "<group>"; };
-		F87029CCD3C7CE11313F7487AD7736E1 /* Pods_EPLogger_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EPLogger_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F87029CCD3C7CE11313F7487AD7736E1 /* Pods_EPLogger_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EPLogger_Tests.framework; path = "Pods-EPLogger_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE979EC5D3244566BA1A39F6A29C202E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		FF0AE144B678AB1F87D5CD7ADC07A86C /* Pods-EPLogger_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EPLogger_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,28 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		214A5AB80313B1440EE3E5EB90A611FC /* Pod */ = {
+		1704F8AA99F84C5CDFD89E329AB80D48 /* EPLogger */ = {
 			isa = PBXGroup;
 			children = (
-				23E0922281F0A162C1FD45D16FDA24CF /* EPLogger.podspec */,
-				D710D566FA4EBADB99B425EF1737BAB3 /* LICENSE */,
-				701A7B9DA56C05C9AC495CB8FFB8B857 /* README.md */,
+				3FD0DA5AA790AB0C9B474AE302859C3A /* EPLogger.swift */,
+				D3F2A9E471D27A2DD7E6443BAD383F26 /* Pod */,
+				784C2F7FD5F0395846A680A0D1C2D94F /* Support Files */,
 			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		2365D0340AB5E3C65D9B2D1DE8A0AEA0 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				CF3FED1BD41DF75678A605CB8DC1A6EE /* EPLogger.modulemap */,
-				1C24CAE7D36CDD70513EAFB04A055132 /* EPLogger.xcconfig */,
-				621159E1F9144A83DE2A34A28337BE19 /* EPLogger-dummy.m */,
-				EA33BB5E1CC876BD29B513A0E53EBA05 /* EPLogger-Info.plist */,
-				5DB65058E29F0A8079C1AD64EB8E20FA /* EPLogger-prefix.pch */,
-				5D7EFEC129CBC7AA0D3DF51C6D992679 /* EPLogger-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/EPLogger";
+			name = EPLogger;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		28E27DAB9327F25E7EA10694EE0D2F98 /* Products */ = {
@@ -159,6 +147,21 @@
 			path = "Target Support Files/Pods-EPLogger_Example";
 			sourceTree = "<group>";
 		};
+		784C2F7FD5F0395846A680A0D1C2D94F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4185DA2D1C4D8F89B22453D28142615A /* EPLogger.modulemap */,
+				9A6B53294F5AB67844237B0E35485038 /* EPLogger-dummy.m */,
+				23126C628FCFD203EA847937D95F57A8 /* EPLogger-Info.plist */,
+				B1DB0AB0DFF605B74A5141A5F301A4A9 /* EPLogger-prefix.pch */,
+				D42EC3765AC2D5E6178CD2CC409B911B /* EPLogger-umbrella.h */,
+				919D9E5121A0B87AF11804C3E81295A8 /* EPLogger.debug.xcconfig */,
+				6B908DD34A685419841713A23C5F766A /* EPLogger.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/EPLogger";
+			sourceTree = "<group>";
+		};
 		B39FFF9FE9D15377CE49BD0F52688730 /* Pods-EPLogger_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,17 +176,6 @@
 			);
 			name = "Pods-EPLogger_Tests";
 			path = "Target Support Files/Pods-EPLogger_Tests";
-			sourceTree = "<group>";
-		};
-		BC3B73885BF1FD2323D171E2A2E061ED /* EPLogger */ = {
-			isa = PBXGroup;
-			children = (
-				DB5523AD231771E000B77962 /* EPLogger.swift */,
-				214A5AB80313B1440EE3E5EB90A611FC /* Pod */,
-				2365D0340AB5E3C65D9B2D1DE8A0AEA0 /* Support Files */,
-			);
-			name = EPLogger;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -208,7 +200,7 @@
 		CF6832E9292C7E695BDCB7E21E32598C /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BC3B73885BF1FD2323D171E2A2E061ED /* EPLogger */,
+				1704F8AA99F84C5CDFD89E329AB80D48 /* EPLogger */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -219,6 +211,16 @@
 				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3F2A9E471D27A2DD7E6443BAD383F26 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				66F4747DBB8AF5CA91A27266E44DFF55 /* EPLogger.podspec */,
+				8186663337DA3B63AC6F11EA3B820D04 /* LICENSE */,
+				FE979EC5D3244566BA1A39F6A29C202E /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +277,7 @@
 			buildConfigurationList = 9FD4C5DAE4A4C4B392EDD1DBA832809A /* Build configuration list for PBXNativeTarget "EPLogger" */;
 			buildPhases = (
 				529ED8D7DAAE0746D79844FB5880C55A /* Headers */,
-				C12CFD6C018EB70E00F8834AF37F75E0 /* Sources */,
+				E6E8749426355D51E166701259086B42 /* Sources */,
 				32A2606A2696BA282AAF5EC57574B29C /* Frameworks */,
 				1D453C187CF3858177EE47FD64055310 /* Resources */,
 			);
@@ -315,11 +317,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
-				TargetAttributes = {
-					CDDAAE5B605FEBB1AD6B4DCF5BBEE9F2 = {
-						LastSwiftMigration = 1120;
-					};
-				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -382,12 +379,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C12CFD6C018EB70E00F8834AF37F75E0 /* Sources */ = {
+		E6E8749426355D51E166701259086B42 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB5523AE231771E000B77962 /* EPLogger.swift in Sources */,
-				620639F509055E4F2BE3C3C84D1BF700 /* EPLogger-dummy.m in Sources */,
+				B56C6F1E603788C449871809DA3E9E89 /* EPLogger-dummy.m in Sources */,
+				A8C11CFC75EE0E7D155ED4C1EBD73884 /* EPLogger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,11 +440,10 @@
 			};
 			name = Release;
 		};
-		28A29BD471E9D3211EDF47882FEB35D2 /* Debug */ = {
+		4348E358AB36C445DA11487AD6C39BCC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C24CAE7D36CDD70513EAFB04A055132 /* EPLogger.xcconfig */;
+			baseConfigurationReference = 6B908DD34A685419841713A23C5F766A /* EPLogger.release.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -462,41 +458,6 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 1.1.0;
-				MODULEMAP_FILE = "Target Support Files/EPLogger/EPLogger.modulemap";
-				PRODUCT_MODULE_NAME = EPLogger;
-				PRODUCT_NAME = EPLogger;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		34BC0C782A560BA13015A845BBBD7136 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C24CAE7D36CDD70513EAFB04A055132 /* EPLogger.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/EPLogger/EPLogger-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EPLogger/EPLogger-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 1.1.0;
 				MODULEMAP_FILE = "Target Support Files/EPLogger/EPLogger.modulemap";
 				PRODUCT_MODULE_NAME = EPLogger;
 				PRODUCT_NAME = EPLogger;
@@ -578,6 +539,37 @@
 			};
 			name = Release;
 		};
+		99E3A332D4F7D979771C77B2FBC953A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 919D9E5121A0B87AF11804C3E81295A8 /* EPLogger.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EPLogger/EPLogger-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EPLogger/EPLogger-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EPLogger/EPLogger.modulemap";
+				PRODUCT_MODULE_NAME = EPLogger;
+				PRODUCT_NAME = EPLogger;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		B0087CB4594321EF41619F3181FE120E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -631,7 +623,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -767,8 +760,8 @@
 		9FD4C5DAE4A4C4B392EDD1DBA832809A /* Build configuration list for PBXNativeTarget "EPLogger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				28A29BD471E9D3211EDF47882FEB35D2 /* Debug */,
-				34BC0C782A560BA13015A845BBBD7136 /* Release */,
+				99E3A332D4F7D979771C77B2FBC953A7 /* Debug */,
+				4348E358AB36C445DA11487AD6C39BCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
