@@ -194,7 +194,7 @@ public struct Log {
         }
     }
     
-    private static func logger(
+    public static func logger(
         _ level: Log.Level,
         fileName: String,
         line: UInt,
