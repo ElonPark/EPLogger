@@ -1,5 +1,5 @@
 PODS:
-  - EPLogger (1.1.3)
+  - EPLogger (1.2.3)
 
 DEPENDENCIES:
   - EPLogger (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  EPLogger: 930e32636081f0e1804a02997ebb89761d1bcfbc
+  EPLogger: bb3e393551103894bd1d96bad4556cb54519a32d
 
 PODFILE CHECKSUM: a8631a7901040d7ddac01ffc59b141f98c4bef73
 
