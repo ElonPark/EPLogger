@@ -12,6 +12,18 @@ fileprivate extension DispatchQueue {
         return String(validatingUTF8: __dispatch_queue_get_label(nil))
     }
 }
+extension Log {
+    public enum PrinterType {
+        /// use `print()`
+        case `default`
+        
+        /// use `debugPrint()`
+        case debug
+        
+        /// use `dump()`
+        case dump
+    }
+}
 
 extension Log {
     public enum Level: String {
@@ -80,7 +92,7 @@ public struct Log {
             return String(format: "%p", Thread.current)
         }
     }
-    
+
     /// Custom Level Header
     ///
     /// ex)
@@ -194,13 +206,12 @@ public struct Log {
         }
     }
     
-    private static func logger(
+    public static func logger(
         _ level: Log.Level,
         fileName: String,
         line: UInt,
         funcName: String,
-        useDebugPrint: Bool,
-        useDump: Bool,
+        printerType: Log.PrinterType,
         output: Any
     ) {
         #if DEBUG
@@ -214,7 +225,7 @@ public struct Log {
 
         internalQueue.sync {
             guard let items = output as? [Any] else {
-                logPrinter(logString, useDebugPrint, useDump, value: output)
+                logPrinter(logString, printerType, value: output)
                 return
             }
             
@@ -222,47 +233,52 @@ public struct Log {
             case 0:
                 Swift.print(logString)
             case 1:
-                logPrinter(logString, useDebugPrint, useDump, value: items[0])
+                logPrinter(logString, printerType, value: items[0])
             default:
-                multipleItemLogPrinter(logString, useDebugPrint, useDump, items: items)
+                multipleItemLogPrinter(logString, printerType, items: items)
             }
         }
         #endif
     }
     
-    private static func logPrinter(_ logString: String, _ useDebugPrint: Bool, _ useDump: Bool, value: Any) {
-        if useDump {
+    private static func logPrinter(_ logString: String, _ printType: Log.PrinterType, value: Any) {
+        switch printType {
+        case .debug:
+            Swift.print("\(logString)\(separator)", terminator: "")
+            Swift.debugPrint(value)
+            
+        case .dump:
             Swift.print("\(logString)\(separator)")
             Swift.dump(value, name: name(value), indent: 2)
-        } else {
+            
+        case .default:
             Swift.print("\(logString)\(separator)", terminator: "")
-            if useDebugPrint {
-                Swift.debugPrint(value)
-            } else {
-                Swift.print(value)
-            }
+            Swift.print(value)
         }
     }
     
     private static func multipleItemLogPrinter(
         _ logString: String,
-        _ useDebugPrint: Bool,
-        _ useDump: Bool,
+        _ printType: Log.PrinterType,
         items: [Any]
     ) {
-        if useDump {
+        switch printType {
+        case .debug:
+            Swift.print("\(logString) ▽")
+            for item in items {
+                Swift.debugPrint(item)
+            }
+            
+        case .dump:
             Swift.print("\(logString) ▽")
             for item in items {
                 Swift.dump(item, name: name(item), indent: 2)
             }
-        } else {
+            
+        case .default:
             Swift.print("\(logString) ▽")
             for item in items {
-                if useDebugPrint {
-                    Swift.debugPrint(item)
-                } else {
-                    Swift.print(item)
-                }
+                Swift.print(item)
             }
         }
     }
@@ -275,8 +291,7 @@ public struct Log {
         fileName: String = #file,
         line: UInt = #line,
         funcName: String = #function,
-        useDebugPrint: Bool = false,
-        useDump: Bool = false,
+        printBy printerType: Log.PrinterType = .default,
         _ output: Any...
     ) {
         logger(
@@ -284,8 +299,7 @@ public struct Log {
             fileName: fileName,
             line: line,
             funcName: funcName,
-            useDebugPrint: useDebugPrint,
-            useDump: useDump,
+            printerType: printerType,
             output: output
         )
     }
@@ -294,8 +308,7 @@ public struct Log {
         fileName: String = #file,
         line: UInt = #line,
         funcName: String = #function,
-        useDebugPrint: Bool = false,
-        useDump: Bool = false,
+        printBy printerType: Log.PrinterType = .default,
         _ output: Any...
     ) {
         logger(
@@ -303,8 +316,7 @@ public struct Log {
             fileName: fileName,
             line: line,
             funcName: funcName,
-            useDebugPrint: useDebugPrint,
-            useDump: useDump,
+            printerType: printerType,
             output: output
         )
     }
@@ -313,8 +325,7 @@ public struct Log {
         fileName: String = #file,
         line: UInt = #line,
         funcName: String = #function,
-        useDebugPrint: Bool = false,
-        useDump: Bool = false,
+        printBy printerType: Log.PrinterType = .default,
         _ output: Any...
     ) {
         logger(
@@ -322,8 +333,7 @@ public struct Log {
             fileName: fileName,
             line: line,
             funcName: funcName,
-            useDebugPrint: useDebugPrint,
-            useDump: useDump,
+            printerType: printerType,
             output: output
         )
     }
@@ -332,8 +342,7 @@ public struct Log {
         fileName: String = #file,
         line: UInt = #line,
         funcName: String = #function,
-        useDebugPrint: Bool = false,
-        useDump: Bool = false,
+        printBy printerType: Log.PrinterType = .default,
         _ output: Any...
     ) {
         logger(
@@ -341,8 +350,7 @@ public struct Log {
             fileName: fileName,
             line: line,
             funcName: funcName,
-            useDebugPrint: useDebugPrint,
-            useDump: useDump,
+            printerType: printerType,
             output: output
         )
     }
@@ -351,8 +359,7 @@ public struct Log {
         fileName: String = #file,
         line: UInt = #line,
         funcName: String = #function,
-        useDebugPrint: Bool = false,
-        useDump: Bool = false,
+        printBy printerType: Log.PrinterType = .default,
         _ output: Any...
     ) {
         logger(
@@ -360,8 +367,7 @@ public struct Log {
             fileName: fileName,
             line: line,
             funcName: funcName,
-            useDebugPrint: useDebugPrint,
-            useDump: useDump,
+            printerType: printerType,
             output: output
         )
     }

@@ -32,27 +32,27 @@ final class ViewController: UIViewController {
         
         let text = "Sample String!"
         Log.verbose(text)
-        Log.verbose(useDebugPrint: true, text)
-        Log.verbose(useDump: true, text)
+        Log.verbose(printBy: .debug, text)
+        Log.verbose(printBy: .dump, text)
         
         print("")
         
         let sample = SampleStruct()
         Log.debug(sample)
-        Log.debug(useDebugPrint: true, sample)
-        Log.debug(useDump: true, sample)
+        Log.debug(printBy: .debug, sample)
+        Log.debug(printBy: .dump, sample)
         
         print("")
         
         Log.verbose(StringEnum.normal)
-        Log.verbose(useDebugPrint: true, StringEnum.vip)
-        Log.verbose(useDump: true, StringEnum.vvip)
+        Log.verbose(printBy: .debug, StringEnum.vip)
+        Log.verbose(printBy: .dump, StringEnum.vvip)
         
         print("")
         
         Log.debug(IntEnum.one)
-        Log.debug(useDebugPrint: true, IntEnum.one)
-        Log.debug(useDump: true, IntEnum.two)
+        Log.debug(printBy: .debug, IntEnum.one)
+        Log.debug(printBy: .dump, IntEnum.two)
     }
     
     private func logItems() {
@@ -61,8 +61,8 @@ final class ViewController: UIViewController {
         let text = "Sample String2!"
         let sample = SampleStruct()
         Log.verbose(text, sample, StringEnum.vvip, IntEnum.two)
-        Log.verbose(useDebugPrint: true, text, sample, StringEnum.vvip, IntEnum.two)
-        Log.verbose(useDump: true, text, sample, StringEnum.vvip, IntEnum.two)
+        Log.verbose(printBy: .debug, text, sample, StringEnum.vvip, IntEnum.two)
+        Log.verbose(printBy: .dump, text, sample, StringEnum.vvip, IntEnum.two)
     }
     
     private func changeFormat() {
