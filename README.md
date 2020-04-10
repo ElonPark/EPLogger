@@ -63,6 +63,12 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'EPLogger'
 ```
+  
+Also, Support Carthage too  
+simply add the following line to your Cartfile:
+```ruby
+github "ElonPark/EPLogger"
+```
 
 ## Author
 
