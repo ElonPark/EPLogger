@@ -214,7 +214,6 @@ public struct Log {
         printerType: Log.PrinterType,
         output: Any
     ) {
-        #if DEBUG
         guard  logLevel.intValue() <= level.intValue() else { return }
         let logString = Log.logString(
             level,
@@ -222,7 +221,7 @@ public struct Log {
             line: line,
             funcName: funcName
         )
-
+        
         internalQueue.sync {
             guard let items = output as? [Any] else {
                 logPrinter(logString, printerType, value: output)
@@ -238,7 +237,6 @@ public struct Log {
                 multipleItemLogPrinter(logString, printerType, items: items)
             }
         }
-        #endif
     }
     
     private static func logPrinter(_ logString: String, _ printType: Log.PrinterType, value: Any) {
