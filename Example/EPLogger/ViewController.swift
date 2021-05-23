@@ -67,23 +67,23 @@ final class ViewController: UIViewController {
     
     private func changeFormat() {
         print("\n - change format")
-        Log.congfig(formatType: .short)
+        Log.config(formatType: .short)
         Log.verbose("short")
         
-        Log.congfig(formatType: .medium)
+        Log.config(formatType: .medium)
         Log.debug("medium")
         
-        Log.congfig(formatType: .long)
+        Log.config(formatType: .long)
         Log.info("long")
         
-        Log.congfig(formatType: .full)
+        Log.config(formatType: .full)
         Log.warning("full")
     }
     
     private func changeLogLevelHeader() {
-        Log.congfig(formatType: .short)
+        Log.config(formatType: .short)
         print("\n - change log level header")
-        Log.congfig(customLevelHeader: [
+        Log.config(customLevelHeader: [
             .verbose: "VERBOSE",
             .debug: "DEBUG"
         ])
@@ -96,12 +96,12 @@ final class ViewController: UIViewController {
     
     private func changeSeparator() {
         print("\n - change separator")
-        Log.congfig(separator: ": ")
+        Log.config(separator: ": ")
         Log.info("Hello")
         Log.warning("world!")
         print("")
         
-        Log.congfig(
+        Log.config(
             level: .debug,
             formatType: .medium,
             separator: " -> "

@@ -177,7 +177,7 @@ public struct Log {
     ///    // WARNING: This is warning
     ///    // ERROR: This is error
     /// ```
-    public static func congfig(
+    public static func config(
         level: Log.Level? = nil,
         customLevelHeader: [Log.Level : String]? = nil,
         formatType: Log.FormatType? = nil,
