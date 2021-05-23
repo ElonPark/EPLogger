@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
      
         // Set log level. default is verbose
-        Log.congfig(level: .verbose, dateFormat: "HH:mm:ss.SSS")
+        Log.config(level: .verbose, dateFormat: "HH:mm:ss.SSS")
         
         return true
     }

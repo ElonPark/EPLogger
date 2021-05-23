@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // Set log level. default is verbose
-        Log.congfig(level: .verbose)
+        Log.config(level: .verbose)
         Log.verbose("This is verbose")
         Log.debug("This is debug")
         Log.info("This is info")
