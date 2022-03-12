@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EPLogger'
-  s.version          = '1.3.6'
+  s.version          = ENV['LIB_VERSION'] || '1.0.0'
   s.summary          = 'Just simple Logger'
 
 # This description is used to generate tags and improve search results.
@@ -39,8 +39,8 @@ Just simple Logger
   s.author           = { 'Elon Park' => 'sungwoon.park92@gmail.com' }
   s.source           = { :git => 'https://github.com/ElonPark/EPLogger.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
-  s.swift_versions = '5.0'
+  s.ios.deployment_target = '9.3'
+  s.swift_versions = '5.5'
   s.source_files = 'EPLogger/Classes/*'
 
 end
