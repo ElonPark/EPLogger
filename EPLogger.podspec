@@ -39,7 +39,7 @@ Just simple Logger
   s.author           = { 'Elon Park' => 'sungwoon.park92@gmail.com' }
   s.source           = { :git => 'https://github.com/ElonPark/EPLogger.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '9.3'
   s.swift_versions = '5.5'
   s.source_files = 'EPLogger/Classes/*'
 
