@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08763280452C9FE5661ABA1713419D77 /* EPLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EPLogger.framework; path = EPLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		08763280452C9FE5661ABA1713419D77 /* EPLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EPLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D501CA998D5A628212AC936C4A173E7 /* Pods-EPLogger_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EPLogger_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		181576E04D9C7A4691F0F56679E1F59B /* Pods-EPLogger_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EPLogger_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		221C1870F04258B7BFA9666059B03843 /* Pods-EPLogger_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EPLogger_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -48,15 +48,15 @@
 		4185DA2D1C4D8F89B22453D28142615A /* EPLogger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EPLogger.modulemap; sourceTree = "<group>"; };
 		43E2A157D9EE2F3CC5DDD5D40CC33162 /* Pods-EPLogger_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EPLogger_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		50035379BE1B54D0F3CDA9B8B20F5CBF /* Pods-EPLogger_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EPLogger_Tests-dummy.m"; sourceTree = "<group>"; };
-		549A74996B97017958145FCC636B7810 /* Pods_EPLogger_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EPLogger_Example.framework; path = "Pods-EPLogger_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		549A74996B97017958145FCC636B7810 /* Pods_EPLogger_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EPLogger_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BD9953BB4BF8DD5670F9DD2ECEA6583 /* Pods-EPLogger_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EPLogger_Tests-Info.plist"; sourceTree = "<group>"; };
-		66F4747DBB8AF5CA91A27266E44DFF55 /* EPLogger.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = EPLogger.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		66F4747DBB8AF5CA91A27266E44DFF55 /* EPLogger.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = EPLogger.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6B908DD34A685419841713A23C5F766A /* EPLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EPLogger.release.xcconfig; sourceTree = "<group>"; };
-		8186663337DA3B63AC6F11EA3B820D04 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		8186663337DA3B63AC6F11EA3B820D04 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		919D9E5121A0B87AF11804C3E81295A8 /* EPLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EPLogger.debug.xcconfig; sourceTree = "<group>"; };
 		9292DF01E63EDF9B136D9F8E3CBD965C /* Pods-EPLogger_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EPLogger_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9A6B53294F5AB67844237B0E35485038 /* EPLogger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EPLogger-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AD870321B03D09DB3096F24D956DB3F4 /* Pods-EPLogger_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EPLogger_Tests.modulemap"; sourceTree = "<group>"; };
 		B1DB0AB0DFF605B74A5141A5F301A4A9 /* EPLogger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EPLogger-prefix.pch"; sourceTree = "<group>"; };
 		B3BEAE81DD52B26DF3A9799CF4AC0592 /* Pods-EPLogger_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EPLogger_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -67,8 +67,8 @@
 		E671D4029BA3F2D3A46F49ED845A0311 /* Pods-EPLogger_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EPLogger_Example-dummy.m"; sourceTree = "<group>"; };
 		E77D780AD94BAF662EE3C594B6B520FD /* Pods-EPLogger_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EPLogger_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		EEA64FF9BB29E806139336B09A64787D /* Pods-EPLogger_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EPLogger_Example-umbrella.h"; sourceTree = "<group>"; };
-		F87029CCD3C7CE11313F7487AD7736E1 /* Pods_EPLogger_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EPLogger_Tests.framework; path = "Pods-EPLogger_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE979EC5D3244566BA1A39F6A29C202E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		F87029CCD3C7CE11313F7487AD7736E1 /* Pods_EPLogger_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EPLogger_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE979EC5D3244566BA1A39F6A29C202E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FF0AE144B678AB1F87D5CD7ADC07A86C /* Pods-EPLogger_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EPLogger_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -458,6 +458,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.3.6;
 				MODULEMAP_FILE = "Target Support Files/EPLogger/EPLogger.modulemap";
 				PRODUCT_MODULE_NAME = EPLogger;
 				PRODUCT_NAME = EPLogger;
@@ -557,6 +558,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.3.6;
 				MODULEMAP_FILE = "Target Support Files/EPLogger/EPLogger.modulemap";
 				PRODUCT_MODULE_NAME = EPLogger;
 				PRODUCT_NAME = EPLogger;
@@ -623,8 +625,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
