@@ -19,6 +19,9 @@ jobs:
       id: extract_version_name       
 
     - uses: release-drafter/release-drafter@v5
+      with:
+          publish: true
+          tag: ${{ steps.extract_version_name.outputs.version }}
 
     - name: Install Cocoapods
       run: gem install cocoapods
