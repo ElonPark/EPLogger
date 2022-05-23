@@ -2,7 +2,7 @@ name: Release-drafter
 on:
   push:
     branches:
-      - feature/refactor-autorelease
+      - master
 
 jobs:
   build:
